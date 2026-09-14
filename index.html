@@ -1,1 +1,340 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Streaming Suárez | Las mejores pantallas, al mejor precio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#070a12',
+              card: '#0e1422',
+              cardHover: '#131b2e',
+              border: '#1f293d',
+              cyan: '#06b6d4',
+              purple: '#8b5cf6',
+              green: '#22c55e',
+              nu: '#820ad1'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #060911;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .brand-glow {
+      box-shadow: 0 0 50px -10px rgba(56, 189, 248, 0.25);
+    }
+    .card-glow:hover {
+      box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+    .toast {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-cyan-500 selection:text-white">
 
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#060911]/90 backdrop-blur-md border-b border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition">
+          <i class="fa-solid fa-play text-white text-lg ml-0.5"></i>
+        </div>
+        <div>
+          <span class="block text-[11px] font-extrabold tracking-widest text-slate-400 uppercase">Streaming</span>
+          <span class="block text-xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400 uppercase leading-none">Suárez</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#inicio" class="text-cyan-400 border-b-2 border-cyan-400 pb-1">Inicio</a>
+        <a href="#catalogo" class="hover:text-cyan-400 transition">Catálogo</a>
+        <a href="#pagos" class="hover:text-cyan-400 transition">Métodos de Pago</a>
+        <a href="#contacto" class="hover:text-cyan-400 transition">Contacto</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/c/573188790915" target="_blank" class="p-2.5 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 transition" title="Buscar en catálogo">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="https://wa.me/c/573188790915" target="_blank" class="relative p-2.5 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 transition" title="Catálogo WhatsApp">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="absolute -top-1 -right-1 bg-purple-600 text-[10px] font-bold text-white w-5 h-5 rounded-full flex items-center justify-center border-2 border-[#060911]">10</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="relative pt-12 pb-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(56,189,248,0.15),rgba(255,255,255,0))] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/70 text-cyan-400 text-xs font-bold tracking-wide uppercase mb-6">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            Tu entretenimiento, sin límites
+          </div>
+          
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] mb-4">
+            STREAMING <br>
+            <span class="gradient-text">SUÁREZ</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-400 font-medium mb-8 max-w-xl mx-auto lg:mx-0">
+            Las mejores pantallas, al mejor precio. Disfruta tus películas, series y deportes favoritos con entrega inmediata y garantía total.
+          </p>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 mb-8 text-xs sm:text-sm font-semibold text-slate-300">
+            <div class="flex items-center gap-2 bg-slate-900/60 px-3 py-2 rounded-xl border border-slate-800">
+              <i class="fa-solid fa-bolt text-yellow-400"></i>
+              <span>Entrega rápida</span>
+            </div>
+            <div class="flex items-center gap-2 bg-slate-900/60 px-3 py-2 rounded-xl border border-slate-800">
+              <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+              <span>100% seguro</span>
+            </div>
+            <div class="flex items-center gap-2 bg-slate-900/60 px-3 py-2 rounded-xl border border-slate-800">
+              <i class="fa-solid fa-headset text-purple-400"></i>
+              <span>Soporte confiable</span>
+            </div>
+          </div>
+
+          <!-- Hero CTA Button -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="https://wa.me/c/573188790915" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-base shadow-xl shadow-green-600/25 hover:scale-[1.02] active:scale-95 transition">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              <span>Comprar por WhatsApp</span>
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+            <a href="#catalogo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 font-bold text-base border border-slate-700 transition">
+              <span>Ver Catálogo</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Graphic Banner -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl p-1 bg-gradient-to-b from-cyan-500/30 via-purple-500/20 to-transparent shadow-2xl brand-glow">
+            <div class="bg-brand-card rounded-[22px] p-6 sm:p-8 border border-slate-800 text-center relative overflow-hidden">
+              <div class="absolute -top-16 -right-16 w-40 h-40 bg-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="absolute -bottom-16 -left-16 w-40 h-40 bg-cyan-600/30 rounded-full blur-3xl pointer-events-none"></div>
+              
+              <div class="w-20 h-20 mx-auto mb-5 rounded-2xl bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-cyan-500/30">
+                <i class="fa-solid fa-play text-white text-3xl ml-1"></i>
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-black text-white italic tracking-wide mb-2">
+                "Más que series,<br>es tu mundo."
+              </h3>
+              <p class="text-xs text-slate-400 mb-6">Cuentas premium, perfiles independientes y el mejor catálogo de televisión digital.</p>
+              
+              <div class="grid grid-cols-2 gap-3 text-left text-xs font-semibold text-slate-300">
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-green-400"></i> Pantallas 4K
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-green-400"></i> Sin caídas
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-green-400"></i> Pagos en Nequi/Nu
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-green-400"></i> Atención 24/7
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG SECTION -->
+  <section id="catalogo" class="py-16 bg-[#080d1a] border-y border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="mb-12 text-center sm:text-left">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mb-2">
+          Nuestras Pantallas
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto sm:mx-0 mb-3"></div>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Disfruta de tus series, películas y contenido favorito con la mejor calidad.
+        </p>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- 1. NETFLIX -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col card-glow transition duration-300">
+          <div class="h-36 bg-gradient-to-br from-[#400508] via-[#1a0204] to-[#0d0d12] flex flex-col items-center justify-center relative p-4 border-b border-red-900/30">
+            <span class="text-red-600 font-black text-4xl tracking-widest drop-shadow-[0_0_20px_rgba(229,9,20,0.8)]">NETFLIX</span>
+            <span class="text-[10px] font-bold tracking-widest text-red-300/80 uppercase mt-1">Ultra HD 4K</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-black text-white mb-1">Netflix</h3>
+              <p class="text-xs text-slate-400 flex items-center gap-1.5 mb-2">
+                <i class="fa-solid fa-tv text-slate-500"></i> Perfil Extra Original
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Disponible
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-white mb-4">$18.000 <span class="text-xs font-semibold text-slate-400">COP</span></div>
+              <button onclick="openCheckout('Netflix', '$18.000', 'Perfil Extra Original')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-200 hover:text-white font-bold text-sm border border-slate-700 hover:border-emerald-500 flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> Comprar por WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. DISNEY+ -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col card-glow transition duration-300">
+          <div class="h-36 bg-gradient-to-br from-[#072448] via-[#041329] to-[#060911] flex flex-col items-center justify-center relative p-4 border-b border-blue-900/30">
+            <div class="text-center">
+              <span class="text-sky-300 font-black text-3xl tracking-wider drop-shadow-[0_0_20px_rgba(56,189,248,0.7)]">Disney+</span>
+              <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-1"></div>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-black text-white mb-1">Disney+</h3>
+              <p class="text-xs text-slate-400 flex items-center gap-1.5 mb-2">
+                <i class="fa-solid fa-tv text-slate-500"></i> Pantalla Premium 4K
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Disponible
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-white mb-4">$15.000 <span class="text-xs font-semibold text-slate-400">COP</span></div>
+              <button onclick="openCheckout('Disney+', '$15.000', 'Pantalla Premium 4K')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-200 hover:text-white font-bold text-sm border border-slate-700 hover:border-emerald-500 flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> Comprar por WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. HBO MAX -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col card-glow transition duration-300">
+          <div class="h-36 bg-gradient-to-br from-[#270c3d] via-[#150422] to-[#060911] flex flex-col items-center justify-center relative p-4 border-b border-purple-900/30">
+            <span class="text-purple-300 font-black text-3xl tracking-widest drop-shadow-[0_0_20px_rgba(168,85,247,0.7)]">HBOMax</span>
+            <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest mt-1">Estrenos Exclusivos</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-black text-white mb-1">HBO Max</h3>
+              <p class="text-xs text-slate-400 flex items-center gap-1.5 mb-2">
+                <i class="fa-solid fa-tv text-slate-500"></i> Pantalla Platino
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Disponible
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-white mb-4">$12.000 <span class="text-xs font-semibold text-slate-400">COP</span></div>
+              <button onclick="openCheckout('HBO Max', '$12.000', 'Pantalla Platino')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-200 hover:text-white font-bold text-sm border border-slate-700 hover:border-emerald-500 flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> Comprar por WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. PRIME VIDEO -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col card-glow transition duration-300">
+          <div class="h-36 bg-gradient-to-br from-[#0a2744] via-[#041525] to-[#060911] flex flex-col items-center justify-center relative p-4 border-b border-cyan-900/30">
+            <span class="text-cyan-400 font-black text-2xl tracking-wider">prime video</span>
+            <div class="w-16 h-1 border-b-2 border-cyan-400 rounded-full mt-1"></div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-black text-white mb-1">Prime Video</h3>
+              <p class="text-xs text-slate-400 flex items-center gap-1.5 mb-2">
+                <i class="fa-solid fa-tv text-slate-500"></i> Pantalla Original 4K
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Disponible
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-white mb-4">$12.000 <span class="text-xs font-semibold text-slate-400">COP</span></div>
+              <button onclick="openCheckout('Prime Video', '$12.000', 'Pantalla Original 4K')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-200 hover:text-white font-bold text-sm border border-slate-700 hover:border-emerald-500 flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> Comprar por WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. CRUNCHYROLL -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col card-glow transition duration-300">
+          <div class="h-36 bg-gradient-to-br from-[#421f06] via-[#241002] to-[#060911] flex flex-col items-center justify-center relative p-4 border-b border-orange-900/30">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-notch text-orange-500 text-2xl"></i>
+              <span class="text-orange-400 font-black text-2xl tracking-wide">crunchyroll</span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-black text-white mb-1">Crunchyroll</h3>
+              <p class="text-xs text-slate-400 flex items-center gap-1.5 mb-2">
+                <i class="fa-solid fa-tv text-slate-500"></i> Pantalla Mega Fan
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Disponible
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-white mb-4">$12.000 <span class="text-xs font-semibold text-slate-400">COP</span></div>
+              <button onclick="openCheckout('Crunchyroll', '$12.000', 'Pantalla Mega Fan')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-200 hover:text-white font-bold text-sm border border-slate-700 hover:border-emerald-500 flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> Comprar por WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. FLUJO TV (TARJETA DESTACADA ANCHA 2 COLUMNAS) -->
+        <div class="sm:col-span-2 lg:col-span-2 bg-gradient-to-br from-[#120b29] via-[#0d0f22] to-[#1a0f1d] rounded-2xl border-2 border-purple-500/50 p-6 f
